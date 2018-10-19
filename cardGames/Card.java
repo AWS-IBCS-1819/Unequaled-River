@@ -1,4 +1,4 @@
-/* Card.java created by Mr. Considine
+/* Card.java created by Kitty Liu
 This file holds all of the data and methods
 for a playing card to be used in Deck and Pokerhand
 */

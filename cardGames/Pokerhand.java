@@ -63,11 +63,11 @@ public class Pokerhand {
   }
 
   public static void main(String[] args) {
-    System.out.println("Number of hands dealt: 505");
+    System.out.println("Number of hands dealt: 1000");
 
     Pokerhand p = new Pokerhand();
     //System.out.println(p.d.cards);
-    for (int i = 0; i < 505; i++) {
+    for (int i = 0; i < 1000; i++) {
       p.d = p.shuffle(p.d);
       ArrayList<String> h = p.giveHand(p.d);
       //System.out.println(h);
