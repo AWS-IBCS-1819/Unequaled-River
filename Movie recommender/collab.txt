@@ -1,0 +1,14 @@
+Avengers:InfinityWar 1 1 0 1 1 0 1 0
+ReadyPlayerOne 1 0 1 0 1 0 0 0
+Spiderman:Homecoming 1 1 0 1 0 0 1 0
+It 1 0 1 1 0 0 0 0
+Room 0 0 1 1 0 1 1 1
+Coco 1 1 1 1 0 1 1 0
+Up 1 0 1 1 1 1 1 1
+TheBigShort 0 1 0 1 1 0 0 1
+Arrival 0 0 1 1 0 0 1 1
+EdgeOfTomorrow 1 0 1 1 1 1 1 0
+Zootopia 1 0 1 0 1 1 0 1
+Her 0 0 1 0 0 1 0 1
+ToyStory3 0 0 1 0 1 1 1 1
+ThePerksOfBeingAWallFlower 0 1 1 0 0 1 0 1
