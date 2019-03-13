@@ -3,27 +3,19 @@ import java.io.*;
 
 
 public class CitationGenerator {
-  // public ArrayList[CiteWithValue] CWVarrayList;
+  public ArrayList<Citation> CarrayList = new ArrayList<Citation>();
 
   public CitationGenerator(){ //constructor method
 
   }
 
-
-  public void formatCitation(){
-    
-  }
-
-  public void printCitation(){
-    System.out.println();
-  }
-
-  public void assignNumVal(String input){
+  public ArrayList<Integer> assignNumVal(String input){
     input = input.toLowerCase();
     char[] charArray1 = input.toCharArray();
+    ArrayList<Integer> numVal = new ArrayList<Integer>();
     for (int n = 0; n<charArray1.length; n++) {//to prevent it from getting to big
       char check = charArray1[n];
-      ArrayList<Integer> numVal = new ArrayList<Integer>();
+
       if (check == 'a' || check == 'b' || check == 'c' || check == 'd'
       || check == 'e' || check == 'f' || check == 'g' || check == 'h'
       || check == 'i' || check == 'j' || check == 'k' || check == 'l'
@@ -59,11 +51,11 @@ public class CitationGenerator {
         }else if (check == 'z') { numVal.add(26);
         }
       }
-      for (int i=0; i<numVal.size(); i++) {
-        System.out.println(numVal.get(i));
-      }
-
     }
+    // for (int i=0; i<numVal.size(); i++) {
+    //   System.out.println(numVal.get(i));
+    // }
+    return numVal;
   }
 
   public boolean compareNumVals(ArrayList<Integer> a1, ArrayList<Integer> a2){
@@ -82,20 +74,41 @@ public class CitationGenerator {
     return change;
   }
 
-  // public void sortCitation(){
-  //   for (int minIndex = 0; minIndex < CWVarrayList.size(); minIndex++) {
-  //     for (int n = 0; n < CWVarrayList.size(); n++) {
-  //       boolean change = false;
-  //       if (CWVarrayList.get(minIndex).getnumValue()) {
-  //
-  //       }
-  //
-  //     }
-  //   }
-  // }
+  public void sortCitation(){
+    //initiate values
+    ArrayList<Citation> sortedList = new ArrayList<Citation>();
+    Citation min = new Citation();
+    int minIndex = 0;
+    boolean change;
 
-  public void printSortedList(){
 
+
+    //duplicate the list
+    ArrayList<Citation> tempList = new ArrayList<Citation>();
+    for (int h = 0; h < CarrayList.size(); h++ ) {//duplicating the list
+      //purpose: to keep the length of the original list
+      tempList.set(h, CarrayList.get(h));
+    }
+
+    for (int i = 0; i < CarrayList.size(); i++ ) {//number of minumum we need
+      min = tempList.get(0);//track the minumum, always start from the 1st item
+      for (int j = 0; j < tempList.size() ; j++ ) {//the method to find the minimum
+        change = false;//default
+        change = compareNumVals(CarrayList.get(minIndex).getnumValue(),
+          CarrayList.get(j).getnumValue());
+        if (change = true) {
+          min = tempList.get(j);
+        }
+      }
+      tempList.remove(min);
+      sortedList.add(min);
+    }
+  }
+
+  public void printCitationList(ArrayList<Citation> List){
+    for (int h = 0; h < List.size(); h++ ) {
+      System.out.println(List.get(h).formatIntoString());
+    }
   }
 
 
