@@ -3,10 +3,10 @@ import java.io.*;
 
 
 public class CitationGenerator {
-  public ArrayList<Citation> CarrayList = new ArrayList<Citation>();
+  public ArrayList<Citation> CarrayList;
 
   public CitationGenerator(){ //constructor method
-
+    CarrayList = new ArrayList<Citation>();
   }
 
   public ArrayList<Integer> assignNumVal(String input){
@@ -81,8 +81,6 @@ public class CitationGenerator {
     int minIndex = 0;
     boolean change;
 
-
-
     //duplicate the list
     ArrayList<Citation> tempList = new ArrayList<Citation>();
     for (int h = 0; h < CarrayList.size(); h++ ) {//duplicating the list
@@ -94,8 +92,8 @@ public class CitationGenerator {
       min = tempList.get(0);//track the minumum, always start from the 1st item
       for (int j = 0; j < tempList.size() ; j++ ) {//the method to find the minimum
         change = false;//default
-        change = compareNumVals(CarrayList.get(minIndex).getnumValue(),
-          CarrayList.get(j).getnumValue());
+        change = compareNumVals(CarrayList.get(minIndex).getNumVal(),
+          CarrayList.get(j).getNumVal());
         if (change = true) {
           min = tempList.get(j);
         }

@@ -64,9 +64,7 @@ public class Citation{
     return end;
   }
 
-  public static void setNumVal(ArrayList<Integer> input){
-    numVal = input;
-  }
+
 
   public static void setArticleTitle(String a){ArticleTitle = a;}
   public static void setAuthorFirst(String a){AuthorFirst = a;}
@@ -79,6 +77,9 @@ public class Citation{
   public static void setDateMonth(String a){DateMonth = a;}
   public static void setDateYear(String a){DateYear = a;}
 
+  public static void setNumVal(ArrayList<Integer> input){
+    numVal = input;
+  }
 
   public static ArrayList<Integer> getNumVal(){
     return numVal;
